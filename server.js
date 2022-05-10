@@ -18,5 +18,8 @@ app.use(errorHandler);
 dbConnect();
 
 const port = process.env.PORT || 5050;
+app.get("/", (req, res) => {
+  return res.send(`<h1>Hello Everyone<h1/>`);
+});
 
 app.listen(port, console.log(`Server listening on port ${port}`));
